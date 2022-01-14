@@ -49,7 +49,7 @@
               data:formData,
               success:function(data){
                 const obj = JSON.parse(data);
-                if ((obj.status) == "success") {
+                if ((obj.status) == "Success") {
                   alert("Successfully Login");
                   window.location.href = "homepage.php";
                 } else {
