@@ -74,7 +74,7 @@
                   <input type="password" class="form-control" name="confirmpassword" placeholder="Confirm Password" required="required"><br>
                 </div>
                 <div class="form-group">
-                  <button type="submit" name="register" value="Sign Up" id = "submit" onclick="return rgValidation()" class="btn btn-primary">Register</button><br><br>
+                  <button type="submit" name="register" value="Sign Up" id = "submit"  class="btn btn-primary">Register</button><br><br>
                 </div>
               </form>
             </div>
@@ -125,7 +125,8 @@
                 console.log(obj.status);
                 if ((obj.status) == "success") {
                   alert("Successfully add data");
-                  window.location.href = "homepage.php";
+                  $("#signupform").modal('hide');
+                    $("#exampleModal").modal('show');
                 } else {
                   alert("fail to insert, " + data.errormessage);
                 }
