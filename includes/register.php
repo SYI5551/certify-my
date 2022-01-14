@@ -48,7 +48,7 @@
         <div class="row">
           <div class="signup_wrap">
             <div class="col-md-12 col-sm-6">
-              <form  method="post" name="signup" >
+              <form  method="post" id="regForm"name="signup" >
                 <div class="form-group">
                   <input type="text" class="form-control" name="firstname" placeholder="First Name" required="required"><br>
                 </div>
@@ -109,7 +109,7 @@
           }
           });
 
-          $("form").submit(function(e){
+          $("#regForm").submit(function(e){
             e.preventDefault();
             var formData = $(this).serialize();
          

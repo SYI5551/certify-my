@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <?php
 
 session_start();
@@ -6,10 +7,11 @@ error_reporting(0);
 
     if(isset($_POST['update']))
         {
+          //get email n phonenumber from registered acc
             $email = $_POST['email'];
             $phonenum = $_POST['phonenum'];
             $newpassword = md5($_POST['newpassword']);
-            $sql = "SELECT email FROM registration WHERE email=:email and phonenum=:phonenum";
+            $sql = "SELECT * FROM registration WHERE email=:email and phonenum=:phonenum";
             $query = $dbh -> prepare($sql);
             $query-> bindParam(':email', $email, PDO::PARAM_STR);
             $query-> bindParam(':phonenum', $phonenum, PDO::PARAM_STR);
@@ -24,27 +26,16 @@ error_reporting(0);
                     $chngpwd1-> bindParam(':phonenum', $phonenum, PDO::PARAM_STR);
                     $chngpwd1-> bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
                     $chngpwd1-> execute();
-                    echo "<script>alert('Your Password has been succesfully changed.');</script>";
+                    echo "<script>alert('MAntappp');</script>";
                 }
                 else 
                     {
                         echo "<script>alert('Email or Phone Number is invalid.');</script>";
                     }
         }
+
 ?>
 
-<script type="text/javascript">
-    function fpValidation()
-        {
-            if(document.chngpwd.newpassword.value!= document.chngpwd.confirmpassword.value)
-                {
-                    alert("New Password and Confirm Password do not match! Please re-enter!");
-                    document.chngpwd.confirmpassword.focus();
-                    return false;
-                }
-        return true;
-        }
-</script>
 
 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -57,8 +48,8 @@ error_reporting(0);
       <div class="row">
         <div class="forgotpassword_wrap">
         <div class="col-md-12 col-sm-6">
-            <form method="post">
-                <div class="form-group" method="post" onSubmit="return fpValidation();">
+            <form method="post" name="chngpwd" onsubmit="return (fpValidation())" >
+                <div class="form-group">
                     <input type="email" class="form-control" name="email" placeholder="Email Address*" required="required">
                 </div>
                 <br>
@@ -76,7 +67,7 @@ error_reporting(0);
                 <br>
                 <div class="form-group">
                 <p class="gray_text"><i>For security reason, we don't store your password. Your password will be reset and a new one will be send.</i></p>
-                 <button type="submit" name="update" value="Reset My Password"class="btn btn-primary">Reset Password</button><br><br>
+                 <button type="submit" id="update" name="update" class="btn btn-primary" onclick="return fpValidation()">Reset Password</button><br><br>
                  <p><a href="#exampleModal" data-bs-toggle="modal" data-dismiss="modal">Back to Log In</a></p> 
                 </div>
             </form>
@@ -91,3 +82,16 @@ error_reporting(0);
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+    function fpValidation()
+        {
+            if(document.chngpwd.newpassword.value!= document.chngpwd.confirmpassword.value)
+                {
+                    alert("New Password and Confirm Password do not match! Please re-enter!");
+                    document.chngpwd.confirmpassword.focus();
+                    return false;
+                }
+        return true;
+        }
+</script>

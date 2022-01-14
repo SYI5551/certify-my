@@ -11,7 +11,7 @@
       <div class="row">
         <div class="login_wrap">
         <div class="col-md-12 col-sm-6">
-            <form method="post">
+            <form method="post" id="loginForm">
                 <div class="form-group">
                     <input type="email" class="form-control" name="email" placeholder="Email address*" required="required">
                 </div>
@@ -40,7 +40,7 @@
 <script>
   $(document).ready(function (event)  
 {
-   $("form").submit(function(e){
+   $("#loginForm").submit(function(e){
             e.preventDefault();
             var formData = $(this).serialize();
               $.ajax({
