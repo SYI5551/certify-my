@@ -10,7 +10,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="homepage.php">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="#">Create Course</a></li>
+          <li><a class="nav-link scrollto" href="view/cCourse.php">Create Course</a></li>
           <li><a class="nav-link scrollto" href="#">Record</a></li>
           <li><a class="nav-link scrollto" href="#">Verify Certificate</a></li>
         </ul>
@@ -62,7 +62,7 @@
                     <?php if($_SESSION['login']){?>
                     <li><a href="myProfile.php">My Profile</a></li>
                     <li><a href="updatePassword.php">Update Password</a></li>
-                    <li><a href="logout.php">Sign Out</a></li>
+                    <li><a href="db/logout.php">Sign Out</a></li>
                     <?php } 
                         else 
                             { 
