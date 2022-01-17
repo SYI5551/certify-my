@@ -6,26 +6,24 @@ error_reporting(0);
 //dia boleh create course only when the user is logged in
 if(strlen($_SESSION['login'])==0)
       {
-        header('location:homepage.php');
+        header('location:../homepage.php');
       }
       else
         {
             if(isset($_POST['createcourse']))
             {
-                $email=$_POST['email'];
-                $password=md5($_POST['password'];
-                $ccourse=$_POST['createcourse'];
+                $coursename=$_POST['coursename'];
                 $cname=$_POST['companyname'];
                 $position=$_POST['position']);
-
                 $email=$_SESSION['login'];
 
-                $sql = "update createcourse set createcourse:=createcourse, companyname:=companyname, position:=position where email:=email";
+                $sql = "INSERT INTO createcourse (coursename, companyname, email, position) 
+                VALUES(:coursename, :companyname, :email, :position)";
+
 
                 $query = $dbh->prepare($sql);
                 $query->bindParam(':email',$email,PDO::PARAM_STR);
-                $query->bindParam(':password',$password,PDO::PARAM_STR);
-                $query->bindParam(':ccourse',$ccourse,PDO::PARAM_STR);
+                $query->bindParam(':coursename',$coursename,PDO::PARAM_STR);
                 $query->bindParam(':cname',$cname,PDO::PARAM_STR);
                 $query->bindParam(':position',$position,PDO::PARAM_STR);
                 $query->execute();
