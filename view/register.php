@@ -97,7 +97,7 @@
             var email = $("#emailid").val();
             if(email.length >=3){
               $.ajax({
-              url: "view/checkAvailability.php",
+              url: "checkAvailability.php",
               data:'emailid='+email,
               type: "POST",
               success:function(data){
