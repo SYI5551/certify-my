@@ -91,7 +91,7 @@
 
 <div class="col-md-6 col-sm-8">
 <div class="profile_wrap">
-<form name="createcourse" method="post">
+<form name="createcourse" method="post" action="../db/cCourseControl.php">
 
             <?php if($error){?><div class="errorWrap"><strong>Error </strong>:<?php echo htmlentities($error); ?> </div><?php }
             else if($msg){?><div class="succWrap"><strong>Success </strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
@@ -99,7 +99,7 @@
 
             <div class="form-group">
               <label class="control-label">Course Name</label>
-              <input class="form-control white_bg" value="<?php echo htmlentities($result->coursename);?>" id="createcourse" name="createcourse"  type="text" required>
+              <input class="form-control white_bg" value="<?php echo htmlentities($result->coursename);?>" id="coursename" name="coursename"  type="text" required>
             </div>
             <br>
             <div class="form-group">
