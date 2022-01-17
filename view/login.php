@@ -45,7 +45,7 @@
             var formData = $(this).serialize();
               $.ajax({
                 type: "POST",
-              url: "includes/loginControl.php",
+              url: "db/loginControl.php",
               data:formData,
               success:function(data){
                 const obj = JSON.parse(data);

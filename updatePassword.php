@@ -1,7 +1,7 @@
 <?php
     session_start();
     error_reporting(0);
-    include('includes/config.php');
+    include('db/config.php');
     if(isset($_POST['update']))
         {
             $password = md5($_POST['password']);
@@ -32,7 +32,7 @@
 
 <?php
   session_start();
-  include('includes/config.php');
+  include('db/config.php');
   error_reporting(0);
 ?>
 
@@ -90,7 +90,7 @@
 
 <body>
 <!--Header-->
-<?php include('includes/header.php');?>
+<?php include('view/header.php');?>
 
 <main id="main">
 
@@ -164,13 +164,13 @@
 
 
 <!--Footer -->
-<?php include('includes/footer.php');?>
+<?php include('view/footer.php');?>
 
 <!--Login-Form -->
-<?php include('includes/login.php');?>
+<?php include('view/login.php');?>
 
 <!--Register-Form -->
-<?php include('includes/registration.php');?>
+<?php include('db/registration.php');?>
 
 <!--Forgot-password-Form -->
 <?php include('forgotpassword.php');?>

@@ -1,6 +1,6 @@
 <?php
   session_start();
-  include('includes/config.php');
+  include('db/config.php');
   error_reporting(0);
 ?>
 
@@ -46,7 +46,7 @@
 
 <body>
 <!--Header-->
-<?php include('includes/header.php');?>
+<?php include('view/header.php');?>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -165,13 +165,13 @@
 
   
 <!--Footer -->
-<?php include('includes/footer.php');?>
+<?php include('view/footer.php');?>
 
 <!--Login-Form -->
-<?php include('includes/login.php');?>
+<?php include('view/login.php');?>
 
 <!--Register-Form -->
-<?php include('includes/register.php');?>
+<?php include('view/register.php');?>
 
 <!--Forgot-password-Form -->
 <?php include('forgotPassword.php');?>

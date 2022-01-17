@@ -1,7 +1,7 @@
 <?php
     session_start();
     error_reporting(0);
-    include('includes/config.php');
+    include('db/config.php');
 
     if(strlen($_SESSION['login'])==0)
       {
@@ -45,7 +45,7 @@
 
 <?php
   session_start();
-  include('includes/config.php');
+  include('db/config.php');
   error_reporting(0);
 ?>
 
@@ -91,7 +91,7 @@
 
 <body>
 <!--Header-->
-<?php include('includes/header.php');?>
+<?php include('view/header.php');?>
 
 <main id="main">
 
@@ -436,13 +436,13 @@
 </main>
 
 <!--Footer -->
-<?php include('includes/footer.php');?>
+<?php include('view/footer.php');?>
 
 <!--Login-Form -->
-<?php include('includes/login.php');?>
+<?php include('view/login.php');?>
 
 <!--Register-Form -->
-<?php include('includes/registration.php');?>
+<?php include('view/registration.php');?>
 
 <!--Forgot-password-Form -->
 <?php include('forgotpassword.php');?>

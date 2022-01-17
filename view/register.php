@@ -25,7 +25,7 @@
 
         if($lastInsertId)
             {  
-                header('Location: register.php');
+                header('Location: view/register.php');
                 exit();
             }
             else
@@ -97,7 +97,7 @@
             var email = $("#emailid").val();
             if(email.length >=3){
               $.ajax({
-              url: "checkAvailability.php",
+              url: "view/checkAvailability.php",
               data:'emailid='+email,
               type: "POST",
               success:function(data){
@@ -118,7 +118,7 @@
                 
               $.ajax({
                 type: "POST",
-              url: "includes/registration.php",
+              url: "db/registration.php",
               data:formData,
               success:function(data){
                 const obj = JSON.parse(data);

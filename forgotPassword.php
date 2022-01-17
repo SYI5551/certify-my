@@ -2,7 +2,7 @@
 <?php
 
 session_start();
-include('includes/config.php');
+include('db/config.php');
 error_reporting(0);
 
     if(isset($_POST['update']))
@@ -26,7 +26,7 @@ error_reporting(0);
                     $chngpwd1-> bindParam(':phonenum', $phonenum, PDO::PARAM_STR);
                     $chngpwd1-> bindParam(':newpassword', $newpassword, PDO::PARAM_STR);
                     $chngpwd1-> execute();
-                    echo "<script>alert('MAntappp');</script>";
+                    echo "<script>alert('Your password has been successfully changed.');</script>";
                 }
                 else 
                     {
