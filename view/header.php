@@ -8,7 +8,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="homepage.php">Home</a></li>
+          <li><a class="nav-link scrollto active" href="../homepage.php">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About Us</a></li>
           <li><a class="nav-link scrollto" href="view/cCourse.php">Create Course</a></li>
           <li><a class="nav-link scrollto" href="#">Record</a></li>
