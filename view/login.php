@@ -48,6 +48,7 @@
               url: "db/loginControl.php",
               data:formData,
               success:function(data){
+                console.log(data);
                 const obj = JSON.parse(data);
                 if ((obj.status) == "Success") {
                   alert("Successfully Login");

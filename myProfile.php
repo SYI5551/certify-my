@@ -45,7 +45,7 @@
 
 <?php
   session_start();
-  include('db/config.php');
+ 
   error_reporting(0);
 ?>
 

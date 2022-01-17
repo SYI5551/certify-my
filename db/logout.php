@@ -10,5 +10,5 @@ if (ini_get("session.use_cookies")) {
 }
 unset($_SESSION['login']);
 session_destroy(); // destroy session
-header("location:homepage.php"); 
+header("location:/certify-my/homepage.php"); 
 ?>
