@@ -38,7 +38,7 @@
         <ul>
           <li><i class="bx bx-chevron-right"></i> <a href="homepage.php">Home</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="#aboutus">About us</a></li>
-          <li><i class="bx bx-chevron-right"></i> <a href="">Create Course</a></li>
+          <li><i class="bx bx-chevron-right"></i> <a href="view/cCourse.php">Create Course</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="">Record</a></li>
           <li><i class="bx bx-chevron-right"></i> <a href="">Verify Certificate</a></li>
         </ul>

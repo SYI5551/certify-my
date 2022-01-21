@@ -13,15 +13,17 @@ if(strlen($_SESSION['login'])==0)
             {
                 $coursename=$_POST['coursename'];
                 $position=$_POST['position'];
+                $date=$_POST['date'];
                 $email=$_SESSION['login'];
 
-                $sql = "INSERT INTO createcourse (coursename, email, position) 
-                VALUES(:coursename, :email, :position)";
+                $sql = "INSERT INTO createcourse (coursename, email, date, position) 
+                VALUES(:coursename, :email, :date, :position)";
 
 
                 $query = $dbh->prepare($sql);
                 $query->bindParam(':email',$email,PDO::PARAM_STR);
                 $query->bindParam(':coursename',$coursename,PDO::PARAM_STR);
+                $query->bindParam(':date',$date,PDO::PARAM_STR);
                 $query->bindParam(':position',$position,PDO::PARAM_STR);
                 $query->execute();
                 $msg=" Create course has been created successfully.";

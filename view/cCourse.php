@@ -49,6 +49,26 @@
         return true;
         }
 </script> -->
+<style>
+    .errorWrap 
+      {
+        padding: 10px;
+        margin: 0 0 20px 0;
+        background: #fff;
+        border-left: 4px solid #dd3d36;
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+      }
+  .succWrap
+      {
+        padding: 10px;
+        margin: 0 0 20px 0;
+        background: #fff;
+        border-left: 4px solid #5cb85c;
+        -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+      }
+</style>
 </head>
 
 <body>
@@ -96,15 +116,30 @@
             <?php if($error){?><div class="errorWrap"><strong>Error </strong>:<?php echo htmlentities($error); ?> </div><?php }
             else if($msg){?><div class="succWrap"><strong>Success </strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
             <br>
-
+            <h5>Please tick any of these two options to be inserted into your certificate.</h5>
+            <br>
             <div class="form-group">
-              <label class="control-label">Course Name</label>
-              <input class="form-control white_bg" value="<?php echo htmlentities($result->coursename);?>" id="coursename" name="coursename"  type="text" required>
+              <input id="myCheck" onclick="checkCheckbox()" type="checkbox">
+              <label for ="myCheck">Course Name</label>
+              <br>
+              <input value="<?php echo htmlentities($result->coursename);?>" name="coursename" id="text" style="display:none">
             </div>
             <br>
             <div class="form-group">
-              <label class="control-label">Position</label>
-              <input class="form-control white_bg" value="<?php echo htmlentities($result->position);?>" id="position" type="position" name="position" required>
+              <input id="myPosition" onclick="checkPosition()" type="checkbox">
+              <label for ="myPosition">Position</label>
+              <br>
+              <input value="<?php echo htmlentities($result->position);?>" name="position" id="texts" style="display:none">
+            </div>
+            <br>
+            <div class="form-group">
+              <label class="control-label">Date &nbsp;</label>
+              <input class="form-control white_bg" value="<?php echo htmlentities($result->date);?>" name="date" id="date" type="date" >
+            </div>
+            <br>
+            <div class="form-group">
+              <label class="control-label">Email Address</label>
+              <input class="form-control white_bg" value="<?php echo htmlentities($result->email);?>" name="emailid" id="email" type="email" required readonly>
             </div>
             <br>
             <div class="form-group">
@@ -160,6 +195,36 @@
         myModal.addEventListener('shown.bs.modal', function () {
           myInput.focus()
         })
+  </script>
+  <script>
+    function checkCheckbox()
+      {
+        var checkBox = document.getElementById("myCheck");
+        var text = document.getElementById("text");
+
+        if (checkBox.checked == true)
+          {
+            text.style.display = "block";
+          }
+          else
+            {
+              text.style.display = "none";
+            }
+      }
+      function checkPosition()
+      {
+        var checkPosi = document.getElementById("myPosition");
+        var texts = document.getElementById("texts");
+
+        if (checkPosi.checked == true)
+          {
+            texts.style.display = "block";
+          }
+          else
+            {
+              texts.style.display = "none";
+            }
+      }
   </script>
 </body>
 </html>
