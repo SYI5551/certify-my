@@ -108,12 +108,12 @@
                   foreach($results as $result)
               {
         ?>
-<div class="row">
-<div class="col-md-6 col-md-8">
+<!-- <div class="row">
+<div class="col-md-6 col-md-8"> -->
   <!-- Sidebar -->
-  <?php include('../view/viewCourse.php');?>
+  <!-- <?php include('../view/viewCourse.php');?>
 </div>
-</div>
+</div> -->
 
 <div class="col-md-6 col-sm-8">
 <div class="profile_wrap">
@@ -128,14 +128,14 @@
               <input id="myCheck" onclick="checkCheckbox()" type="checkbox">
               <label for ="myCheck">Course Name</label>
               <br>
-              <input value="<?php echo htmlentities($result->coursename);?>" name="coursename" id="text" style="display:none" required>
+              <input value="<?php echo htmlentities($result->coursename);?>" name="coursename" id="text" style="display:none" >
             </div>
             <br>
             <div class="form-group">
               <input id="myPosition" onclick="checkPosition()" type="checkbox">
               <label for ="myPosition">Position</label>
               <br>
-              <input value="<?php echo htmlentities($result->position);?>" name="position" id="texts" style="display:none" required>
+              <input value="<?php echo htmlentities($result->position);?>" name="position" id="texts" style="display:none" >
             </div>
             <br>
             <div class="form-group">
@@ -155,8 +155,8 @@
             <br>
             <br>
             <div class="form-group">
-              <button type="submit" name="createcourse" value="create" id = "submit" class="btn btn-primary">Create</button>
-              <button  class="btn btn-primary">View Course List</button><br><br>
+              <button type="submit" name="createcourse" onclick = "enableButton()" value = "create" id = "submit" class="btn btn-primary">Create</button>
+              <button a href ="" type="button" id="courselist" class="btn btn-primary">View Course List</a></button><br><br>
               <br><br>
             </div>
             
@@ -237,6 +237,13 @@
               texts.style.display = "none";
             }
       }
+      $(document).ready(function (event)  
+
+        {
+          document.Ready("courselist").disabled = false;
+        }
+
+      
   </script>
 </body>
 </html>
