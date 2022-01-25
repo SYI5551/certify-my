@@ -126,7 +126,7 @@
         ?>
 
 <div class="col-md-6 col-sm-8">
-<div class="profile_wrap">
+<div class="updatepassword_wrap">
 <form name="updatepwd" method="post" onSubmit="return upValidation();">
 
             <?php if($error){?><div class="errorWrap"><strong>Error </strong>:<?php echo htmlentities($error); ?> </div><?php }

@@ -39,8 +39,7 @@
                 $query->execute();
                 $msg=" Profile has been updated successfully.";
             }
-            else
-            $msg=" Profile has not been updated successfully.";
+            
 ?>
 
 <?php
@@ -109,6 +108,7 @@
     </section><!-- End Breadcrumbs -->
 
     <section class="inner-page">
+    <div class="container">
     <?php
           $email = $_SESSION['login'];
           $sql = "SELECT * from registration where email=:email";
@@ -123,6 +123,7 @@
                   foreach($results as $result)
               {
     ?>
+    </div>
 
 <div class="col-md-6 col-sm-8">
     <div class="profile_wrap">
@@ -130,7 +131,6 @@
 
         <form method="post">
             <?php } ?>
-
             <div class="form-group">
               <label class="control-label">First Name</label>
               <input class="form-control white_bg" value="<?php echo htmlentities($result->firstname);?>" name="firstname"  id="firstname" type="text"  required>

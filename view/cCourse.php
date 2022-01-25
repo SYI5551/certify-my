@@ -108,6 +108,12 @@
                   foreach($results as $result)
               {
         ?>
+<div class="row">
+<div class="col-md-6 col-md-8">
+  <!-- Sidebar -->
+  <?php include('../view/viewCourse.php');?>
+</div>
+</div>
 
 <div class="col-md-6 col-sm-8">
 <div class="profile_wrap">
@@ -122,14 +128,14 @@
               <input id="myCheck" onclick="checkCheckbox()" type="checkbox">
               <label for ="myCheck">Course Name</label>
               <br>
-              <input value="<?php echo htmlentities($result->coursename);?>" name="coursename" id="text" style="display:none">
+              <input value="<?php echo htmlentities($result->coursename);?>" name="coursename" id="text" style="display:none" required>
             </div>
             <br>
             <div class="form-group">
               <input id="myPosition" onclick="checkPosition()" type="checkbox">
               <label for ="myPosition">Position</label>
               <br>
-              <input value="<?php echo htmlentities($result->position);?>" name="position" id="texts" style="display:none">
+              <input value="<?php echo htmlentities($result->position);?>" name="position" id="texts" style="display:none" required>
             </div>
             <br>
             <div class="form-group">
@@ -147,15 +153,21 @@
               <input class="form-control white_bg" value="<?php echo htmlentities($result->companyname);?>" name="companyname" id="companyname" type="text"  required>
             </div>
             <br>
-            <br><div class="form-group">
-            <button type="submit" name="createcourse" value="create" id = "submit" class="btn btn-primary">Create</button><br><br>
+            <br>
+            <div class="form-group">
+              <button type="submit" name="createcourse" value="create" id = "submit" class="btn btn-primary">Create</button>
+              <button  class="btn btn-primary">View Course List</button><br><br>
+              <br><br>
             </div>
+            
 
 </form>
 </div>
 </div>
+
         </p>
       </div>
+      
     </section>
 
   </main><!-- End #main -->

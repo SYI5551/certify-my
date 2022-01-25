@@ -1,5 +1,5 @@
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top ">
+<header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
     <h1 class="logo me-auto"><a href="homepage.php">Certify.My</a></h1>
@@ -8,9 +8,9 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="../homepage.php">Home</a></li>
+          <li><a class="nav-link scrollto active" href="http://localhost/certify-my/homepage.php">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li><a class="nav-link scrollto" href="../view/cCourse.php">Create Course</a></li>
+          <li><a class="nav-link scrollto" href="http://localhost/certify-my/view/cCourse.php">Create Course</a></li>
           <li><a class="nav-link scrollto" href="#">Record</a></li>
           <li><a class="nav-link scrollto" href="#">Verify Certificate</a></li>
         </ul>
@@ -32,7 +32,7 @@
 <!-- Navigation -->
     <nav id="navigation_bar" class="navbar navbar-default">
         <div class="container">
-        <div class="header_wrap">
+        <!-- <div class="header_wrap"> -->
             <div class="user_login">
             <ul>
                 <?php if($_SESSION['login'])
@@ -60,8 +60,8 @@
         
                 <ul class="dropdown-menu">
                     <?php if($_SESSION['login']){?>
-                    <li><a href="myProfile.php">My Profile</a></li>
-                    <li><a href="updatePassword.php">Update Password</a></li>
+                    <li><a href="http://localhost/certify-my/myProfile.php">My Profile</a></li>
+                    <li><a href="http://localhost/certify-my/updatePassword.php">Update Password</a></li>
                     <li><a href="db/logout.php">Sign Out</a></li>
                     <?php } 
                         else 
@@ -76,4 +76,5 @@
 
         </div>
         </div>
+    </nav>
   </header>
