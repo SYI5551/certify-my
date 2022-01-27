@@ -1,14 +1,14 @@
 <style>
-table 
-    {
-        counter-reset: section;
-    }
+  table 
+      {
+          counter-reset: section;
+      }
 
-.count:before 
-    {
-        counter-increment: section;
-        content: counter(section);
-    }
+  .count:before 
+      {
+          counter-increment: section;
+          content: counter(section);
+      }
 </style>
 
 <div class="table-responsive">          

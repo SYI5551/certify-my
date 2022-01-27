@@ -129,14 +129,14 @@
               <input id="myCheck" onclick="checkCheckbox()" type="checkbox">
               <label for ="myCheck">Course Name</label>
               <br>
-              <input value="<?php echo htmlentities($result->coursename);?>" name="coursename" id="text" style="display:none" >
+              <input class="form-control white_bg" value="<?php echo htmlentities($result->coursename);?>" name="coursename" id="text" style="display:none" >
             </div>
             <br>
             <div class="form-group">
               <input id="myPosition" onclick="checkPosition()" type="checkbox">
               <label for ="myPosition">Position</label>
               <br>
-              <input value="<?php echo htmlentities($result->position);?>" name="position" id="texts" style="display:none" >
+              <input class="form-control white_bg" value="<?php echo htmlentities($result->position);?>" name="position" id="texts" style="display:none" >
             </div>
             <br>
             <div class="form-group">
@@ -156,7 +156,7 @@
             <br>
             <br>
             <div class="form-group">
-              <button type="submit" name="createcourse" onclick = "enableButton()" value = "create" id = "submit" class="btn btn-primary">Create</button>
+              <button type="submit" name="createcourse" value = "create" id = "submit" class="btn btn-primary">Create</button>
               <button a href ="" type="button" id="courselist" class="btn btn-primary">View Course List</a></button><br><br>
               <br><br>
             </div>
@@ -213,7 +213,7 @@
     
      $(document).ready(function ()
       {
-        $('#courselist').attr('disabled', true);
+        $('#courselist').attr('disabled', false);
       });
     function checkCheckbox()
       {

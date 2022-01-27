@@ -27,16 +27,16 @@ if(strlen($_SESSION['login'])==0)
                 $query->bindParam(':position',$position,PDO::PARAM_STR);
                 $query->execute();
                 $msg=" Create course has been created successfully.";
-                echo "<script>alert('Create course has been created successfully');
-                window.location.href= '../homepage.php';
+                echo "<script>alert('Create course has been created successfully.');
+                window.location.href= '../view/cCourse.php';
                 </script>";
                 
             }
                 else
                     {
                         $msg=" Create course has not been created successfully.";
-                        echo "<script>alert('Create course has not been created successfully');
-                        window.location.href= '../cCourse.php';</script>";
+                        echo "<script>alert('Create course has not been created successfully.');
+                        window.location.href= '../view/cCourse.php';</script>";
                     }
     }
 
