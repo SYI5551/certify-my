@@ -49,6 +49,7 @@
         return true;
         }
 </script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style>
     .errorWrap 
       {
@@ -209,6 +210,11 @@
         })
   </script>
   <script>
+    
+     $(document).ready(function ()
+      {
+        $('#courselist').attr('disabled', true);
+      });
     function checkCheckbox()
       {
         var checkBox = document.getElementById("myCheck");
@@ -237,13 +243,6 @@
               texts.style.display = "none";
             }
       }
-      $(document).ready(function (event)  
-
-        {
-          document.Ready("courselist").disabled = false;
-        }
-
-      
   </script>
 </body>
 </html>
